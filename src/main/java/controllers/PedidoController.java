@@ -24,7 +24,7 @@ public class PedidoController {
 		listaPedidos.add(pedido);
 		return listaPedidos;
 	}
-	
+
 	@GetMapping("{idPedido}")
 	public Pedido getPedidoById(@PathVariable Long idPedido) {
 		return new Pedido(idPedido, LocalDateTime.now(), "EN PREPARACION");
