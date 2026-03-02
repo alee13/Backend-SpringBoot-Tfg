@@ -1,7 +1,5 @@
 package controllers;
 
-import java.time.LocalDate;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -25,9 +23,9 @@ public class UsuarioController {
 		return usuarioRepository.save(newUsuario);
 	}
 
-	@GetMapping("{email}")
-	public Usuario getUsuarioByEmail(@PathVariable String email) {
-		return usuarioRepository.findById(email).orElse(null);
+	@GetMapping("/{email}")
+	public Usuario getUsuarioByEmail(@PathVariable("email") String email) {
+	    return usuarioRepository.findById(email).orElse(null);
 	}
 
 }
