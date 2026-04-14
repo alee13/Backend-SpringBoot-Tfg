@@ -1,0 +1,33 @@
+package controllers;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import db.UsuarioRepository;
+import models.Usuario;
+
+@RestController
+@RequestMapping("/api/usuario")
+public class UsuarioController {
+
+	@Autowired
+	private UsuarioRepository usuarioRepository;
+
+	// ENDPOINT: Crear 
+	@PostMapping
+	public Usuario createUsuario(@RequestBody Usuario newUsuario) {
+		return usuarioRepository.save(newUsuario);
+	}
+
+	// ENDPOINT: Buscar por Email
+	@GetMapping("/{email}")
+	public Usuario getUsuarioByEmail(@PathVariable("email") String email) {
+	    return usuarioRepository.findById(email).orElse(null);
+	}
+
+}

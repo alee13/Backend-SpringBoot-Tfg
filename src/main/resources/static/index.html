@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel del Restaurante</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Panel del Restaurante</h1>
+        <span>Gestión de pedidos y reservas</span>
+    </header>
+
+    <div class="contenedor">
+
+        <!-- SECCIÓN PEDIDOS -->
+        <div class="seccion">
+            <div class="cabecera-seccion">
+                <h2>Pedidos</h2>
+                <button class="btn-recargar" onclick="cargarPedidos()">↻ Recargar</button>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Cliente</th>
+                        <th>Email</th>
+                        <th>Fecha y hora</th>
+                        <th>Estado</th>
+                    </tr>
+                </thead>
+                <tbody id="tabla-pedidos">
+                    <tr>
+                        <td colspan="5" class="sin-datos">Cargando pedidos...</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- SECCIÓN RESERVAS -->
+        <div class="seccion">
+            <div class="cabecera-seccion">
+                <h2>Reservas</h2>
+                <button class="btn-recargar" onclick="cargarReservas()">↻ Recargar</button>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Cliente</th>
+                        <th>Fecha</th>
+                        <th>Hora reservas</th>
+                        <th>Comensales</th>
+                        <th>Estado</th>
+                        <th>Acción</th>
+                    </tr>
+                </thead>
+                <tbody id="tabla-reservas">
+                    <tr>
+                        <td colspan="7" class="sin-datos">Cargando reservas...</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

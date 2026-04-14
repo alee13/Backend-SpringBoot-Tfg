@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Georgia, serif;
+    background-color: #1a1a1a;
+    color: #f0e6d3;
+}
+
+header {
+    background-color: #111;
+    border-bottom: 2px solid #c8a96e;
+    padding: 20px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header h1 {
+    font-size: 24px;
+    color: #c8a96e;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+header span {
+    font-size: 13px;
+    color: #888;
+    font-style: italic;
+}
+
+.contenedor {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 40px;
+}
+
+.seccion {
+    margin-bottom: 50px;
+}
+
+.cabecera-seccion {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.cabecera-seccion h2 {
+    font-size: 18px;
+    color: #c8a96e;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #222;
+}
+
+th {
+    background-color: #111;
+    color: #c8a96e;
+    text-align: left;
+    padding: 14px 18px;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+td {
+    padding: 14px 18px;
+    border-bottom: 1px solid #2e2e2e;
+    font-size: 14px;
+    color: #ddd;
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+.estado-pendiente {
+    color: #f0b429;
+}
+
+.estado-aceptada {
+    color: #4caf50;
+}
+
+.estado-denegada {
+    color: #f44336;
+}
+
+
+.btn, .btn-recargar {
+    cursor: pointer;
+    font-family: Georgia, serif;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 6px 14px;
+    border-radius: 3px;
+    margin-right: 6px;
+}
+
+.btn-aceptar {
+    background-color: #4caf50;
+    color: #fff;
+}
+
+.btn-denegar {
+    background-color: #f44336;
+    color: #fff;
+}
+
+.btn-recargar {
+    background-color: transparent;
+    color: #c8a96e;
+    border: 1px solid #c8a96e;
+    padding: 8px 20px;
+}
+
+.sin-datos, .error {
+    text-align: center;
+    padding: 40px;
+}
+
+.sin-datos {
+    color: #555;
+}
+
+.error {
+    color: #f44336;
+}
